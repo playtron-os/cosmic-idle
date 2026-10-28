@@ -16,8 +16,13 @@ calloop-wayland-source = "0.4.1"
 log = "0.4.28"
 env_logger = "0.11.8"
 upower_dbus = { git = "https://github.com/pop-os/dbus-settings-bindings" }
-zbus = "5.12"
+zbus = "5.19"
 futures-lite = "2.6.1"
+logind-zbus = "5"
+
+[dev-dependencies]
+async-io = "2.6"
+zbus = { version = "5.19", features = ["p2p"] }
 
 [workspace]
 members = [
