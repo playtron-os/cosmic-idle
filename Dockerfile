@@ -1,4 +1,4 @@
-ARG version=1.90
+ARG version=1.92
 FROM rust:${version}
 ARG version
 
@@ -19,8 +19,8 @@ RUN apt-get install -y task
 # RPM support
 RUN apt-get install -y rpm librpmbuild10 elfutils
 
-RUN rustup toolchain install 1.90.0 --profile minimal --component clippy,rustfmt
-RUN rustup target add aarch64-unknown-linux-gnu --toolchain 1.90.0
+RUN rustup toolchain install 1.92.0 --profile minimal --component clippy,rustfmt
+RUN rustup target add aarch64-unknown-linux-gnu --toolchain 1.92.0
 RUN chmod -R 777 /usr/local/rustup
 
 ENV CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER=aarch64-linux-gnu-gcc
