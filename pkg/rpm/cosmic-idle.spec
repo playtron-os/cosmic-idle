@@ -1,6 +1,6 @@
 Name:           cosmic-idle
 Epoch:          1
-Version: 1.11.0
+Version: 1.0.0
 Release:        1%{?dist}
 Summary:        COSMIC Idle - Idle daemon for the COSMIC desktop (Playtron fork)
 
