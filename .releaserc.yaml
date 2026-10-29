@@ -40,9 +40,14 @@ plugins:
         - pkg/rpm/cosmic-idle.spec
 
   # Create a GitHub release with RPM assets
+  # No comments or labels on released pull requests: upstream commits name
+  # pop-os pull requests that this fork does not have, and the lookup fails.
   - - "@semantic-release/github"
     - assets:
         - path: "dist/*x86_64*.rpm"
           label: "RPM (x86_64)"
         - path: "dist/*aarch64*.rpm"
           label: "RPM (aarch64)"
+      successComment: false
+      failComment: false
+      releasedLabels: false
